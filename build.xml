@@ -23,11 +23,17 @@
     </target>
   
     <target name="runant">
-	  <exec executable="ant">        
-		  <arg line="compile"/>
-        <arg line="jar"/>
-        <arg line="run"/>
-    </exec>
+	  <exec executable="echo">        
+		  <arg line="111"/>
+	  </exec>
+
+
+
+  </target>
+
+
+  <target name="doGant">
+    <gant file="build.gant" target="otherStuff"/>
   </target>
   
 
