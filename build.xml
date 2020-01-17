@@ -22,19 +22,14 @@
         <java jar="build/jar/HelloWorld.jar" fork="true"/>
     </target>
   
-    <target name="runant">
+    <target name="echo">
 	  <exec executable="echo">        
-		  <arg line="111"/>
+		  <arg line="${ant.file}"/>
 	  </exec>
-
-
-
   </target>
 
-
-  <target name="doGant">
-    <gant file="build.gant" target="otherStuff"/>
+  <target name="antFromAnt">
+    <ant antfile="${ant.file}/../build.xml" target="compile jar run"/>
   </target>
-  
 
 </project>
