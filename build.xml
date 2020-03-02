@@ -31,5 +31,4 @@
   <target name="antFromAnt">
     <ant antfile="${ant.file}/../build.xml" target="compile jar run"/>
   </target>
-
 </project>
